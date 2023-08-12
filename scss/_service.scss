@@ -1,0 +1,32 @@
+@import "_variables";
+@import "_mixins";
+@import "_fonts";
+
+.service {
+	padding-top: 144px;
+	&__box {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__item {
+		max-width: 256px;
+		border: 1px solid $serviceBordercolor;
+		padding: 16px 22px;
+	}
+	&__cart {
+		display: flex;
+
+		align-items: center;
+	}
+	&__title {
+		@include blockFontsfont(16px, $headerBlocktextfont, $headerSigncolor, capitalize);
+		font-weight: bold;
+		line-height: 24px;
+		padding-left: 18px;
+	}
+	&__text {
+		padding-top: 16px;
+		@include blockFontsfont(10px, $headerBlocktextfont, $headerTextcolor, capitalize);
+		line-height: 16px;
+	}
+}

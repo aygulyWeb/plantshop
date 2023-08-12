@@ -1,0 +1,30 @@
+@import "_variables";
+@import "_mixins";
+@import "_fonts";
+
+.buy {
+	padding-top: 80px;
+
+	&__content {
+		display: flex;
+		justify-content: space-between;
+	}
+	&__text {
+		max-width: 522px;
+		padding: 21px;
+	}
+	&__title {
+		@include blockFontsfont(40px, $headerBlocktextfont, #000000, none);
+		font-weight: bold;
+		line-height: 56px;
+	}
+	&__article {
+		padding-top: 16px;
+		@include blockFontsfont(16px, $headerBlocktextfont, $buyArticlecolor, none);
+		opacity: 0.8;
+		line-height: 28px;
+	}
+	&__image {
+		padding-top: 55px;
+	}
+}

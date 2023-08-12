@@ -1,0 +1,20 @@
+// Блоки
+@import "_header";
+@import "_service";
+@import "_featured";
+@import "_buy";
+@import "_visit";
+@import "_footer";
+
+// Переменные
+@import "_variables";
+@import "_mixins";
+@import "_fonts";
+
+.container {
+	max-width: 1168px;
+	margin: 0 auto;
+}
+a {
+	text-decoration: none;
+}

@@ -1,0 +1,92 @@
+@import "_variables";
+@import "_mixins";
+@import "_fonts";
+
+.header {
+	display: flex;
+
+	&__image {
+		position: relative;
+	}
+	&__logo {
+		position: absolute;
+		top: 40px;
+		left: 56px;
+	}
+
+	&__content {
+		flex-basis: 50%;
+	}
+	&__nav {
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		padding-top: 40px;
+		text-align: right;
+	}
+	&__sign-up {
+		text-align: center;
+		padding: 8px 20px;
+		width: 111px;
+		transition: 0.5s linear;
+		@include blockFontsfont(14px, $headerSignfont, $headerSigncolor, capitalize);
+		&:hover {
+			background-color: $headerSigncolor;
+			color: #fff;
+		}
+	}
+	&__sign-in {
+		text-align: center;
+		padding: 8px 20px;
+		width: 111px;
+		transition: 0.5s linear;
+		@include blockFontsfont(14px, $headerSignfont, $headerSigncolor, capitalize);
+		&:hover {
+			background-color: $headerSigncolor;
+			color: #fff;
+		}
+	}
+	form {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	&__input {
+		display: none;
+	}
+	&__toggle {
+		cursor: pointer;
+	}
+	&__searching {
+		opacity: 0;
+		visibility: hidden;
+		transition: 0.5s linear;
+		outline: none;
+		border: none;
+		border-bottom: 1px solid #999;
+	}
+	&__input:checked ~ .header__searching {
+		visibility: visible;
+		opacity: 1;
+	}
+	&__search {
+		padding-right: 21px;
+	}
+	&__shop {
+		padding-right: 8px;
+	}
+	&__texts {
+		padding-left: 77px;
+	}
+	&__title {
+		padding-top: 120px;
+		@include blockFontsfont(68px, $headerBlocktextfont, $headerSigncolor, capitalize);
+		font-weight: 500;
+		line-height: 83px;
+	}
+	&__text {
+		padding-top: 24px;
+		@include blockFontsfont(18px, $headerBlocktextfont, $headerTextcolor, capitalize);
+		line-height: 32px;
+	}
+}

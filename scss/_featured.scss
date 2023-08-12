@@ -1,0 +1,50 @@
+@import "_variables";
+@import "_mixins";
+@import "_fonts";
+
+.featured {
+	&__content {
+		padding-top: 83px;
+		display: flex;
+		justify-content: space-between;
+	}
+	&__title {
+		@include blockFontsfont(20px, $headerBlocktextfont, #000000, capitalize);
+		font-weight: 500;
+		line-height: 24px;
+	}
+	&__selected {
+		@include blockFontsfont(12px, $headerBlocktextfont, #000000, capitalize);
+		font-weight: 500;
+		border-color: $serviceBordercolor;
+		outline: none;
+		padding: 8px 12px;
+	}
+	&__box {
+		padding-top: 38px;
+		display: flex;
+		justify-content: space-between;
+		position: relative;
+		&:before {
+			content: "";
+			border: 1px solid $serviceBordercolor;
+			width: 100%;
+			height: 0px;
+			position: absolute;
+			top: 5%;
+			left: 0;
+		}
+	}
+	&__name {
+		@include blockFontsfont(16px, $headerBlocktextfont, #000000, capitalize);
+		font-weight: 400;
+		text-align: center;
+		padding-top: 20px;
+	}
+	&__price {
+		@include blockFontsfont(16px, $headerBlocktextfont, #000000, uppercase);
+		font-weight: 600;
+		text-align: center;
+		padding-top: 8px;
+	}
+}
